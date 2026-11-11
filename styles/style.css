@@ -61,6 +61,7 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     line-height: 1.1;
     margin-bottom: 20px;
     background: linear-gradient(to right, #fff, var(--accent));
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
