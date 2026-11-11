@@ -149,9 +149,11 @@ section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    border-color: var(--accent);
+@media (hover: hover) and (pointer: fine) {
+    .card:hover {
+        transform: translateY(-5px);
+        border-color: var(--accent);
+    }
 }
 
 .card i { font-size: 2rem; color: var(--accent); margin-bottom: 15px; }
@@ -511,7 +513,9 @@ img {
     transition: transform 0.45s ease;
 }
 
-.card:hover::before {
-    transform: scaleX(1);
+@media (hover: hover) and (pointer: fine) {
+    .card:hover::before {
+        transform: scaleX(1);
+    }
 }
 
