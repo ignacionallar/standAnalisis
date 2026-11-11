@@ -43,7 +43,8 @@ h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
     z-index: 2;
 }
 
-.badge-2026 {
+.badge-2026,
+.badge-2027 {
     background: rgba(6, 182, 212, 0.2);
     color: var(--accent);
     padding: 8px 16px;
@@ -298,11 +299,78 @@ footer p { color: var(--text-muted); margin-bottom: 30px; }
     100% { box-shadow: 0 0 0 0 rgba(6, 182, 212, 0); }
 }
 
-/* Responsive */
+/* ============ RESPONSIVE ============ */
+img {
+    max-width: 100%;
+}
+
+/* --- Tablets --- */
+@media (max-width: 1024px) {
+    section { padding: 70px 30px; }
+    .hero h1 { font-size: 3rem; }
+}
+
+/* --- Móviles / tablets chicas --- */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 2.5rem; }
+    section { padding: 60px 20px; }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        padding: 40px 20px;
+    }
+    .hero h1 { font-size: 2.2rem; }
+    .hero p { font-size: 1rem; margin-bottom: 30px; }
+    .hero .logo-placeholder img { max-width: 140px; }
+
+    .section-title { font-size: 2rem; margin-bottom: 30px; }
+
+    .grid-info { grid-template-columns: 1fr; }
+
+    .year-container {
+        flex-direction: column !important;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+    .year-text { min-width: 0; width: 100%; flex: none; }
+    .year-text h3 { font-size: 1.6rem; }
+
     .materias-list { grid-template-columns: 1fr; }
-    .year-container { flex-direction: column !important; }
-    .img-placeholder { width: 100%; height: 250px; }
+
+    .img-placeholder {
+        min-width: 0;
+        width: 100%;
+        height: 260px;
+        flex: none;
+    }
+
+    .btn-info { padding: 14px 28px; }
+
+    footer { padding: 50px 20px; }
+    footer h2 { font-size: 2rem; }
+}
+
+/* --- Teléfonos --- */
+@media (max-width: 480px) {
+    .hero h1 { font-size: 1.8rem; }
+    .hero p { font-size: 0.95rem; }
+
+    .badge-2026,
+    .badge-2027 {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+        letter-spacing: 1px;
+    }
+
+    .section-title { font-size: 1.7rem; }
+
+    .card { padding: 22px; }
+
+    .img-placeholder { height: 220px; }
+
+    .btn-info { width: 100%; padding: 14px 20px; font-size: 1rem; }
+    .btn-scroll { padding: 12px 24px; }
+
+    footer h2 { font-size: 1.7rem; }
 }
 
